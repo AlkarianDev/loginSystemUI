@@ -1,0 +1,43 @@
+<!-- Login Section -->
+<div *ngIf="!registerMode">
+    <form class="mx-auto col-3" #loginFrom="ngForm" (ngSubmit)="login()" autocomplete="off"
+        *ngIf="(accountService.currentUser$ |async) === null">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Login</label>
+            <input [(ngModel)]="model.username" name="username" type="text" placeholder="login"
+                class="form-control"><br>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input [(ngModel)]="model.password" name="password" type="password" id=2 placeholder="password"
+                class="form-control">
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-primary" [disabled]="!model.username || !model.password">Login</button>
+        </div>
+    </form>
+
+
+    <!-- Register Button -->
+    <div class="mx-auto col-3">
+        <div class="row">
+            <button class="btn btn-info" *ngIf="(accountService.currentUser$ |async) === null"
+                (click)="registerToggle()">Register</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Register Section -->
+
+<div class="mx-auto col-3" *ngIf="registerMode">
+    <div class="row">
+
+
+
+    </div>
+    <app-register></app-register>
+</div>
