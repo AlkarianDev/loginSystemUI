@@ -1,4 +1,8 @@
 <!-- Login Section -->
+<div class="mx-auto col-3">
+    <h1>Login System</h1>
+</div>
+
 <div *ngIf="!registerMode">
     <form class="mx-auto col-3" #loginFrom="ngForm" (ngSubmit)="login()" autocomplete="off"
         *ngIf="(accountService.currentUser$ |async) === null">

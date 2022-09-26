@@ -9,7 +9,7 @@ import { AccountService } from './services/account.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'AllergicUI';
+  title = 'Login System';
   users: any;
 
 
