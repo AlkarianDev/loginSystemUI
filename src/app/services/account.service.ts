@@ -8,7 +8,7 @@ import { User } from '../models/user';
   providedIn: 'root'
 })
 export class AccountService {
-  baseUrl = 'https://localhost:7227/api/';
+  baseUrl = 'https://loginsystemapi.azurewebsites.net/api/';
   private currentUserSource = new ReplaySubject<User>(1);
   currentUser$ = this.currentUserSource.asObservable();
 
