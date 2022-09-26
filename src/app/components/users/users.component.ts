@@ -18,7 +18,7 @@ export class UsersComponent implements OnInit {
   }
 
   getUsers() {
-    this.http.get('https://localhost:7227/api/User').subscribe(response => {
+    this.http.get('https://loginsystemapi.azurewebsites.net/api/User').subscribe(response => {
       this.users = response;
     }, error => {
       console.log(error);
